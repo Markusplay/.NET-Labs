@@ -40,9 +40,9 @@ namespace Lab_1_test
                 {
                     choice = int.Parse(Console.ReadLine());
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Введені некоректні дані");
                     continue;
                 }
 
