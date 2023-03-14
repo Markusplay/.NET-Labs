@@ -10,7 +10,6 @@ namespace Lab_1_test
             Console.WriteLine("Ви ввели некоректне значення");
         }
 
-        //1
         public void ShowSortedEmployees(IOrderedEnumerable<Employee> employees)
         {
             foreach (var item in employees)
@@ -19,7 +18,6 @@ namespace Lab_1_test
             }
         }
 
-        //2
         public void ShowSpecialist(IEnumerable<Employee> employees)
         {
             foreach (var item in employees)
@@ -28,13 +26,11 @@ namespace Lab_1_test
             }
         }
 
-        //3
         public void ShowLowestSalary(int res)
         {
             Console.WriteLine("Найменша зарплатня = " + res);
         }
 
-        //4
         public void ShowFiveYearDateReverse(IEnumerable<Employee> employees)
         {
             foreach (var item in employees)
@@ -43,25 +39,21 @@ namespace Lab_1_test
             }
         }
 
-        //5
         public void ShowAverageSalary(double res)
         {
             Console.WriteLine("Середня зарплатня працівників = " + Math.Round(res));
         }
 
-        //6
         public void ShowMaxSalary(int res)
         {
             Console.WriteLine("Максимальна зарплатня працівників = " + res);
         }
 
-        //7
         public void ShowHighSalary(int res)
         {
             Console.WriteLine("Всьго таких працівників:" + res);
         }
 
-        //8
         public void ShowOrderByDescendingSalary(List<SalaryPerMonth> res)
         {
             foreach (var item in res)
@@ -70,7 +62,6 @@ namespace Lab_1_test
             }
         }
 
-        //9
         public void ShowCompanyToUpper(List<string> res)
         {
             foreach (var item in res)
@@ -79,13 +70,11 @@ namespace Lab_1_test
             }
         }
 
-        //10
         public void ShowBorndedBefore(int res)
         {
             Console.WriteLine("Кількість робітників, що народилися до вказаного року = " + res);
         }
 
-        //11
         public void ShowGroupBySpeciality(IEnumerable<IGrouping<SpecialityType, Employee>> res)
         {
             foreach (var item in res)
@@ -98,7 +87,6 @@ namespace Lab_1_test
             }
         }
 
-        //12
         public void ShowTwoEmployees(IEnumerable<Employee> res)
         {
             foreach (var item in res)
@@ -107,7 +95,6 @@ namespace Lab_1_test
             }
         }
 
-        //13
         public void ShowEmployeeyToLower(List<string> res)
         {
             foreach (var item in res)
@@ -116,7 +103,6 @@ namespace Lab_1_test
             }
         }
 
-        //14
         public void ShowEmployeeSlaryJoined(List<EmployeeSalaryInfo> res)
         {
             foreach (var item in res)
@@ -125,7 +111,6 @@ namespace Lab_1_test
             }
         }
 
-        //15
         public void ShowGetWhile(IEnumerable<EmployeeCompany> res)
         {
             foreach (var item in res)
@@ -134,7 +119,6 @@ namespace Lab_1_test
             }
         }
 
-        //16
         public void ShowDeleteDublicateEmployees(List<int> res)
         {
             foreach (var item in res)
@@ -145,7 +129,6 @@ namespace Lab_1_test
 
 
 
-        //17
         public void EmployeeWithSpeciality(bool res)
         {
             if (res)
@@ -159,7 +142,6 @@ namespace Lab_1_test
         }
 
 
-        //18
         public void ShowUnionEmployees(List<Employee> res)
         {
             foreach (var item in res)
@@ -168,7 +150,6 @@ namespace Lab_1_test
             }
         }
 
-        //19
         public void ShowShSurname(IEnumerable<Employee> res)
         {
             foreach (var item in res)
@@ -177,7 +158,6 @@ namespace Lab_1_test
             }
         }
 
-        //20
         public void ShowAllSameSalaryInMonthNow(bool res)
         {
             if (res)
