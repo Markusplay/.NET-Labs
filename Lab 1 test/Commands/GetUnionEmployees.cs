@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class GetUnionEmployees : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetUnionEmployees(Operation operation, Result result)
+        public GetUnionEmployees(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.GetUnionEmployees();
+            var res = service.GetUnionEmployees();
             result.ShowUnionEmployees(res);
         }
     }

@@ -4,12 +4,12 @@ namespace Lab_1_test.Commands
 {
     public class GetWhile : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetWhile(Operation operation, Result result)
+        public GetWhile(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
@@ -19,7 +19,7 @@ namespace Lab_1_test.Commands
             try
             {
                 int id = int.Parse(Console.ReadLine());
-                var res = operation.GetWhile(id);
+                var res = service.GetWhile(id);
                 result.ShowGetWhile(res);
             }
             catch (Exception ex)

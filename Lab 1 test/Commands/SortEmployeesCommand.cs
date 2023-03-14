@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class SortEmployeesCommand : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public SortEmployeesCommand(Operation operation, Result result)
+        public SortEmployeesCommand(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.SortEmployees();
+            var res = service.SortEmployees();
             result.ShowSortedEmployees(res);
         }
     }

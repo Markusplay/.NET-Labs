@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class GetAverageSalary : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetAverageSalary(Operation operation, Result result)
+        public GetAverageSalary(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.GetAverageSalary();
+            var res = service.GetAverageSalary();
             result.ShowAverageSalary(res);
         }
     }

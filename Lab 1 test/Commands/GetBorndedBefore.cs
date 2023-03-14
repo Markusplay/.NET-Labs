@@ -5,21 +5,29 @@ namespace Lab_1_test.Commands
 {
     public class GetBorndedBefore : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetBorndedBefore(Operation operation, Result result)
+        public GetBorndedBefore(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
             Console.WriteLine("Введіть рік:");
-            int year  = int.Parse(Console.ReadLine());
-            var res = operation.GetBorndedBefore(year);
-            result.ShowBorndedBefore(res);
+            try
+            {
+                int year = int.Parse(Console.ReadLine());
+                var res = service.GetBorndedBefore(year);
+                result.ShowBorndedBefore(res);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }

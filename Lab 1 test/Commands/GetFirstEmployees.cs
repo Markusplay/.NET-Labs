@@ -5,18 +5,18 @@ namespace Lab_1_test.Commands
 {
     public class GetFirstEmployees : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetFirstEmployees(Operation operation, Result result)
+        public GetFirstEmployees(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.GetFirstEmployees();
+            var res = service.GetFirstEmployees();
             result.ShowTwoEmployees(res);
         }
     }

@@ -2,23 +2,31 @@
 
 namespace Lab_1_test.Commands
 {
-    public class highSalaryCount : ICommand
+    public class HighSalaryCount : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public highSalaryCount(Operation operation, Result result)
+        public HighSalaryCount(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
             Console.WriteLine("Ввведіть зарплатню:");
-            int salary = int.Parse(Console.ReadLine());
-            var res = operation.highSalaryCount(salary);
-            result.ShowHighSalary(res);
+            try
+            {
+                int salary = int.Parse(Console.ReadLine());
+                var res = service.highSalaryCount(salary);
+                result.ShowHighSalary(res);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }

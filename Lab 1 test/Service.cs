@@ -4,7 +4,7 @@ using Lab1.Collection;
 
 namespace Lab_1_test
 {
-    public class Operation
+    public class Service
     {
         Datacontext context = new Datacontext();
 

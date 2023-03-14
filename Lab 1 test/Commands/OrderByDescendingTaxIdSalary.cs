@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class OrderByDescendingTaxIdSalary : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public OrderByDescendingTaxIdSalary(Operation operation, Result result)
+        public OrderByDescendingTaxIdSalary(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.OrderByDescendingTaxIdSalary();
+            var res = service.OrderByDescendingTaxIdSalary();
             result.ShowOrderByDescendingSalary(res);
         }
     }

@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class EmployeeyToLower : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public EmployeeyToLower(Operation operation, Result result)
+        public EmployeeyToLower(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.EmployeeyToLower();
+            var res = service.EmployeeyToLower();
             result.ShowEmployeeyToLower(res);
         }
     }

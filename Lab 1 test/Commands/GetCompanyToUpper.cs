@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class GetCompanyToUpper : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetCompanyToUpper(Operation operation, Result result)
+        public GetCompanyToUpper(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.GetCompanyToUpper();
+            var res = service.GetCompanyToUpper();
             result.ShowCompanyToUpper(res);
         }
     }

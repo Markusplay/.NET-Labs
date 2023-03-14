@@ -5,18 +5,18 @@ namespace Lab_1_test.Commands
 {
     public class GetEmployeeSalaryJoined : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetEmployeeSalaryJoined(Operation operation, Result result)
+        public GetEmployeeSalaryJoined(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.GetEmployeeSalaryJoined();
+            var res = service.GetEmployeeSalaryJoined();
             result.ShowEmployeeSlaryJoined(res);
         }
     }

@@ -3,18 +3,18 @@ namespace Lab_1_test.Commands
 {
     public class DeleteDublicateEmployees : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public DeleteDublicateEmployees(Operation operation, Result result)
+        public DeleteDublicateEmployees(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.DeleteDublicateEmployees();
+            var res = service.DeleteDublicateEmployees();
             result.ShowDeleteDublicateEmployees(res);
         }
     }

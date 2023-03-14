@@ -4,18 +4,18 @@ namespace Lab_1_test.Commands
 {
     public class EmployeeWithSpeciality : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public EmployeeWithSpeciality(Operation operation, Result result)
+        public EmployeeWithSpeciality(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
         public void Execute()
         {
-            var res = operation.EmployeeWithSpeciality(SpecialityType.Frontend);
+            var res = service.EmployeeWithSpeciality(SpecialityType.Frontend);
             result.EmployeeWithSpeciality(res);
         }
     }

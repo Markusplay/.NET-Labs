@@ -4,12 +4,12 @@ namespace Lab_1_test.Commands
 {
     public class GetYearDateReverse : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public GetYearDateReverse(Operation operation, Result result)
+        public GetYearDateReverse(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
@@ -19,7 +19,7 @@ namespace Lab_1_test.Commands
             try
             {
                 int year = int.Parse(Console.ReadLine());
-                var res = operation.GetYearDateReverse(year);
+                var res = service.GetYearDateReverse(year);
                 result.ShowFiveYearDateReverse(res);
             }
             catch (Exception)

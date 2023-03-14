@@ -4,12 +4,12 @@ namespace Lab_1_test.Commands
 {
     public class AllSameSalaryInMonthNow : ICommand
     {
-        private Operation operation;
+        private Service service;
         private Result result;
 
-        public AllSameSalaryInMonthNow(Operation operation, Result result)
+        public AllSameSalaryInMonthNow(Service service, Result result)
         {
-            this.operation = operation;
+            this.service = service;
             this.result = result;
         }
 
@@ -19,7 +19,7 @@ namespace Lab_1_test.Commands
             try
             {
                 int salary = int.Parse(Console.ReadLine());
-                bool res = operation.AllSameSalaryInMonthNow(salary);
+                bool res = service.AllSameSalaryInMonthNow(salary);
                 result.ShowAllSameSalaryInMonthNow(res);
             }
             catch (Exception ex)
