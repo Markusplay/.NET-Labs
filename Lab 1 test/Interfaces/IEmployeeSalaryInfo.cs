@@ -5,6 +5,6 @@ namespace Lab_1_test.Interfaces
     {
         string FirstName { get; set; }
         string LastName { get; set; }
-        double Salary { get; set; }
+        decimal Salary { get; set; }
     }
 }

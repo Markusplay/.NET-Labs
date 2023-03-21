@@ -6,7 +6,7 @@ namespace Lab_1_test.Interfaces
     {
         int TaxId { get; set; }
         Month Month { get; set; }
-        int Salary { get; set; }
+        decimal Salary { get; set; }
         string ToString();
     }
 }

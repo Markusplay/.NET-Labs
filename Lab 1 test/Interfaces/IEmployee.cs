@@ -7,9 +7,9 @@ namespace Lab_1_test.Interfaces
     public interface IEmployee
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
         public string? MiddleName { get; set; }
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public EducationType Education { get; set; }
         public SpecialityType Specialty { get; set; }
