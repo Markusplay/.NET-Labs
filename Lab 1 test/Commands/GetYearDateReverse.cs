@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class GetYearDateReverse : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetYearDateReverse(Service service, Result result)
+        public GetYearDateReverse(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

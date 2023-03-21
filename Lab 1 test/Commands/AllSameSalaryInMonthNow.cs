@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class AllSameSalaryInMonthNow : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public AllSameSalaryInMonthNow(Service service, Result result)
+        public AllSameSalaryInMonthNow(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

@@ -1,10 +1,13 @@
 ﻿using Lab_1_test.Enum;
 using Lab_1_test.Enums;
+using Lab_1_test.Interfaces;
 using Lab1.Collection;
 
 namespace Lab_1_test
 {
-    public class Service
+    //DAL => DataProvider/Repository - renamed service to DataProvider
+    //DI => DataProvider I IDataProvider
+    public class DataProvider: IDataProvider
     {
         Datacontext context = new Datacontext();
 
@@ -20,7 +23,8 @@ namespace Lab_1_test
             select e;
 
 
-        public int GetLowestSalary() =>
+        //should be decimal - done
+        public decimal GetLowestSalary() =>
             context.Salaries.Min(s => s.Salary);
 
 
@@ -28,15 +32,15 @@ namespace Lab_1_test
             context.Employees.Where(e => DateTime.Now.Year - e.EmploymentStartDate.Year > year).Reverse();
 
 
-        public double GetAverageSalary() =>
+        public decimal GetAverageSalary() =>
             context.Salaries.Average(s => s.Salary);
 
 
-        public int GetMaxSalary() =>
+        public decimal GetMaxSalary() =>
             context.Salaries.Max(s => s.Salary);
 
 
-        public int highSalaryCount(int n) =>
+        public int HighSalaryCount(int n) =>
             context.Employees.Join(context.Salaries, e => e.TaxId, s => s.TaxId, (e, s) => new
             {
                 Employee = e,
@@ -65,11 +69,9 @@ namespace Lab_1_test
 
         public IEnumerable<Employee> GetFirstEmployees() =>
             context.Employees.OrderBy(e => e.FirstName).Take(1);
-
-
+        //.
         public List<string> EmployeeyToLower() =>
-            context.Employees.Select(e => $"{e.FirstName.ToLower()} {e.LastName.ToLower()} {e.MiddleName.ToLower()}").ToList();
-
+            context.Employees.Select(e => $"{e.FirstName.ToLower()} {e.LastName.ToLower()} {e.MiddleName?.ToLower()}").ToList();
 
         public List<EmployeeSalaryInfo> GetEmployeeSalaryJoined() =>
             (from emp in context.Employees
@@ -82,17 +84,17 @@ namespace Lab_1_test
                  Salary = sal.Salary
              }).ToList();
 
-
-        public IEnumerable<EmployeeCompany> GetWhile(int end) =>
-            context.EmployeeCompanies.TakeWhile(x => x.CompanyId != end);
+        //arg naming - done
+        public IEnumerable<EmployeeCompany> GetWhile(int companyId) =>
+            context.EmployeeCompanies.TakeWhile(x => x.CompanyId != companyId);
 
 
         public List<int> DeleteDublicateEmployees() =>
             context.EmployeeCompanies.Select(e => e.Id).Distinct().ToList();
 
 
-        public bool EmployeeWithSpeciality(SpecialityType spec) =>
-            context.Employees.Any(x => x.Specialty == spec);
+        public bool EmployeeWithSpeciality(SpecialityType specialty) =>
+            context.Employees.Any(x => x.Specialty == specialty);
 
 
         public List<Employee> GetUnionEmployees() => context.Employees.Union(context.Employees2).ToList();
@@ -103,6 +105,6 @@ namespace Lab_1_test
             where employee.LastName.StartsWith(letter)
             select employee;
 
-        public bool AllSameSalaryInMonthNow(double salary) => context.Salaries.All(s => s.Salary == salary);
+        public bool AllSameSalaryInMonthNow(decimal salary) => context.Salaries.All(s => s.Salary == salary);
     }
 }

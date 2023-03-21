@@ -7,9 +7,10 @@ namespace Lab1.Collection
     public class Employee: IEmployee
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
+        //todo ? - got it
+        public string? FirstName { get; set; }
         public string? MiddleName { get; set; }
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public EducationType Education { get; set; }
         public SpecialityType Specialty { get; set; }

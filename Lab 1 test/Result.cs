@@ -26,7 +26,7 @@ namespace Lab_1_test
             }
         }
 
-        public void ShowLowestSalary(int res)
+        public void ShowLowestSalary(decimal res)
         {
             Console.WriteLine("Найменша зарплатня = " + res);
         }
@@ -39,12 +39,12 @@ namespace Lab_1_test
             }
         }
 
-        public void ShowAverageSalary(double res)
+        public void ShowAverageSalary(decimal res)
         {
             Console.WriteLine("Середня зарплатня працівників = " + Math.Round(res));
         }
 
-        public void ShowMaxSalary(int res)
+        public void ShowMaxSalary(decimal res)
         {
             Console.WriteLine("Максимальна зарплатня працівників = " + res);
         }

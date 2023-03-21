@@ -10,7 +10,7 @@ namespace Lab_1_test
             Console.OutputEncoding = Encoding.UTF8;
             new ConsoleMenu();
             Result result = new Result();
-            Service service = new Service();
+            DataProvider service = new DataProvider();
             MenuInvoker invoker = new MenuInvoker();
             invoker.AddCommand(new SortEmployeesCommand(service, result));
             invoker.AddCommand(new GetSpecialistCommand(service, result));
@@ -38,6 +38,7 @@ namespace Lab_1_test
                 int choice;
                 try
                 {
+                    //TODO avoid warnings in code 
                     choice = int.Parse(Console.ReadLine());
                 }
                 catch (Exception)

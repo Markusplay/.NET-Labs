@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class OrderByDescendingTaxIdSalary : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public OrderByDescendingTaxIdSalary(Service service, Result result)
+        public OrderByDescendingTaxIdSalary(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

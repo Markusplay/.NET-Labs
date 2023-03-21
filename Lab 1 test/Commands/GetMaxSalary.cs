@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class GetMaxSalary : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetMaxSalary(Service service, Result result)
+        public GetMaxSalary(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

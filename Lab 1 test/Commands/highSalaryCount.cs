@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class HighSalaryCount : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public HighSalaryCount(Service service, Result result)
+        public HighSalaryCount(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;
@@ -19,7 +19,7 @@ namespace Lab_1_test.Commands
             try
             {
                 int salary = int.Parse(Console.ReadLine());
-                var res = service.highSalaryCount(salary);
+                var res = service.HighSalaryCount(salary);
                 result.ShowHighSalary(res);
             }
             catch (Exception ex)

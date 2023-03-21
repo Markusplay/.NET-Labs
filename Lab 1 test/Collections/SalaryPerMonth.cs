@@ -9,7 +9,8 @@ namespace Lab1.Collection
     {
         public int TaxId { get; set; }
         public Month Month { get; set; }
-        public int Salary { get; set; }
+        //decimal - done
+        public decimal Salary { get; set; }
 
         //List<Employee> Employees { get; set; }
         public override string ToString()

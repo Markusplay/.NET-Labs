@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class GetWhile : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetWhile(Service service, Result result)
+        public GetWhile(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

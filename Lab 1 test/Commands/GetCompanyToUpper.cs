@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class GetCompanyToUpper : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetCompanyToUpper(Service service, Result result)
+        public GetCompanyToUpper(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

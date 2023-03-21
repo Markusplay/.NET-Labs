@@ -5,10 +5,10 @@ namespace Lab_1_test.Commands
 {
     public class GetEmployeeSalaryJoined : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetEmployeeSalaryJoined(Service service, Result result)
+        public GetEmployeeSalaryJoined(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

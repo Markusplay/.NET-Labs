@@ -4,10 +4,12 @@ namespace Lab_1_test.Commands
 {
     public class GetAverageSalary : ICommand
     {
-        private Service service;
+        //Interfaces
+        private DataProvider service;
         private Result result;
 
-        public GetAverageSalary(Service service, Result result)
+        //interfaces
+        public GetAverageSalary(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

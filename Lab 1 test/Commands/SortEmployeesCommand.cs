@@ -4,10 +4,11 @@ namespace Lab_1_test.Commands
 {
     public class SortEmployeesCommand : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public SortEmployeesCommand(Service service, Result result)
+        //public SortEmployeesCommand(Service service, Result result, Action<string> printer)
+        public SortEmployeesCommand(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

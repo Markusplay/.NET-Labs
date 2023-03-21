@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class GetSpecialistCommand : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetSpecialistCommand(Service service, Result result)
+        public GetSpecialistCommand(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

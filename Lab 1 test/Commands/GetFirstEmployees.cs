@@ -5,10 +5,10 @@ namespace Lab_1_test.Commands
 {
     public class GetFirstEmployees : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetFirstEmployees(Service service, Result result)
+        public GetFirstEmployees(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

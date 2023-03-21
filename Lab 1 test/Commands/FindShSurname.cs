@@ -4,10 +4,10 @@ namespace Lab_1_test.Commands
 {
     public class FindShSurname : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public FindShSurname(Service service, Result result)
+        public FindShSurname(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;

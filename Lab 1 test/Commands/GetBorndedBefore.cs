@@ -5,10 +5,10 @@ namespace Lab_1_test.Commands
 {
     public class GetBorndedBefore : ICommand
     {
-        private Service service;
+        private DataProvider service;
         private Result result;
 
-        public GetBorndedBefore(Service service, Result result)
+        public GetBorndedBefore(DataProvider service, Result result)
         {
             this.service = service;
             this.result = result;
